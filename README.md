@@ -65,13 +65,13 @@ __NOTE__: Some installations of windows require `python -m`  to interact with pi
 `pip list` - to demonstrate current/project installations
 
 ##### Other Useful Commands
-`pipenv uninstall packageName` - uninstall a package
-`pipenv --rm` - To remove if needed(nested environments etc)
-`pipenv install flask==0.12.1` - Version Specificity
-`pipenv graph` - print out a tree-like structure showing your dependencies
-`pipenv lock`- This will create/update your`Pipfile.lock` which you’ll never need to (and are never meant to) edit manually. You should always use the generated file.
-`pipenv --venv` - find out where your virtual environment is
-`pipenv --where` - find out where your project home is
+- `pipenv uninstall packageName` - uninstall a package
+- `pipenv --rm` - To remove if needed(nested environments etc)
+- `pipenv install flask==0.12.1` - Version Specificity
+- `pipenv graph` - print out a tree-like structure showing your dependencies
+- `pipenv lock`- This will create/update your`Pipfile.lock` which you’ll never need to (and are never meant to) edit manually. You should always use the generated file.
+- `pipenv --venv` - find out where your virtual environment is
+- `pipenv --where` - find out where your project home is
 https://realpython.com/pipenv-guide/
 
 ---
