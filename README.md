@@ -1,4 +1,4 @@
-## [[Virtual Environments]]
+## Virtual Environments
 What is it? - Why would I want to?
 - Keeps the tools and packages for each project singular to that project and organized in a repeatable and shippable manner.
 If your on a mac you may require `pip3`, `python3`
@@ -7,11 +7,45 @@ __pip__
 - "Python Package Index" - Package management system used to install and manage software packages written in Python. When you want to use a Python library or tool created by someone else, you can typically install it using PIP
 __pipenv__ 
 - Pipenv is a higher-level tool which builds on top of two lower-level tools: pip, and virtualenv. It is used to manage Python packages and environments. It harnesses Pipfile, pip, and virtualenv into one single toolchain.
+
+**__Virtual Environment Cheat Sheet__** 
+:bangbang: *Pay close attention to which directory your terminal is in when running these commands to avoid nested environments.*
+:tools: Utilize `pipenv --rm` in the directory containing the pip files to remove unwanted virtual environment. 
+
+:windows:  `pip install pipenv` 
+:mac:  `pip3 install pipenv`
+> Utilizes pip(python package manager) to install the `pipenv` virtual environment tool.
+> You should only need to run this command **__ONCE__** *EVER* in any terminal to install pipenv globally on your machine.
+
+          **__New Project__**:
+Navigate into the *__new empty project folder__* using your terminal or command prompt.
+:windows:  `pipenv install flask` OR `python -m pipenv install flask`
+:mac:  `pipenv install flask` OR `python3 -m pipenv install flask`
+> This command creates the virtual environment and installs the specified packages.
+> You can add multiple packages with spaces in-between like so:
+>  `python -m pipenv install flask pymysql flask-bcrypt`.
+> You will only need to run this command __ONCE PER PROJECT__ *unless you want to install additional packages*.
+
+          **__Existing Project__**:
+After completing the above step *__once per project folder__* from *within* your project folder in your terminal or command prompt
+:windows:  `pipenv shell` OR `python -m pipenv shell`
+:mac:  `pipenv shell` OR `python3 -m pipenv shell`
+> This command starts the virtual environment
+> You will run this every time you wish to run a server dependent on pipenv packages installed... *so basically any time you want to work on the project*.
+
+ **__Run Server__**:
+:windows:  `python server.py` OR `py server.py`
+:mac:  `python3 server.py` 
+
+**__Turn Off Server__**:
+ctrl+c
+
+**__Turn Off Virtual Environment__**:
+`exit`
 #### Commands
 ##### Global Scope
 Install pipenv
 `pip list` - shows what's globally installed from any location on machine
-`pip uninstall pipenv`
 *Will install this only once... ever. (most likely)*
 `pip install pipenv` - To install pipenv globally and make it available as a command
 ##### Project Scope
@@ -75,3 +109,13 @@ Also any urls that are not defined will get this response
 def catch_all(path):
     return 'Invalid URL.'
 ```
+
+ **__Run Server__**:
+:windows:  `python server.py` OR `py server.py`
+:mac:  `python3 server.py` 
+
+**__Turn Off Server__**:
+ctrl+c
+
+**__Turn Off Virtual Environment__**:
+`exit`
