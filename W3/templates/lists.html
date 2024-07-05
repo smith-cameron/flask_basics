@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Length: {{random_numbers | length}}</h2>
+  <h2>MAX: {{random_numbers | max}}</h2>
+  <h2>MIN: {{random_numbers | min}}</h2>
+  <h2>SORT: {{random_numbers | sort}}</h2>
+  <h1>Students</h1>
+  {% for person in all_people %}
+    <p>{{person}}</p>
+    {% for key, value in person | items %}
+    <p>{{key | upper}}: {{value}}</p>
+    {% endfor %}
+    <p>--------------------------</p>
+  {% endfor %}
+</body>
+</html>
